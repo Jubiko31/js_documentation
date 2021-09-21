@@ -1,0 +1,189 @@
+html,
+body {
+  min-width: 290px;
+  color: #4d4e53;
+  background-color: #ffffff;
+  font-family: 'Open Sans', Arial, sans-serif;
+  line-height: 1.5;
+}
+#ka {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: relative;
+  margin-left:310px;
+  text-decoration: none;
+  color:red;
+}
+/*  navbar  */
+#navbar {
+  position: fixed;
+  min-width: 290px;
+  top: 0px;
+  left: 0px;
+  width: 300px;
+  height: 100%;
+  border-right: solid;
+  border-color: rgba(0, 22, 22, 0.4);
+}
+
+header {
+  color: #000;
+  margin: 10px;
+  text-align: center;
+  font-size: 1.8em;
+  font-weight: 400;
+}
+
+/*  main-content  */
+#main-doc {
+  position:relative;
+  margin: 0 0 110px 320px;
+}
+#main-doc header {
+  text-align: left;
+  margin: 0px;
+}
+
+#navbar ul {
+  height: 88%;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#navbar li {
+  color: #4d4e53;
+  border-top: 1px solid;
+  list-style: none;
+  position: relative;
+  width: 100%;
+}
+
+#navbar li a {
+  text-decoration: none;
+  display: block;
+  padding: 10px 30px;
+  color: inherit;
+  cursor: pointer;
+}
+#navbar li a {
+  text-decoration: none;
+  color:inherit;
+  
+}
+.nav-link:hover {
+  color:#4d4e53;
+  background-color:aliceblue;
+}
+
+section article {
+  color: #4d4e53;
+  margin: 15px;
+  font-size: 0.96em;
+}
+
+section li {
+  margin: 15px 0px 0px 20px;
+}
+
+code {
+  display: block;
+  text-align: left;
+  white-space: pre-line;
+  position: relative;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 2;
+  background-color: #f7f7f7;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 5px;
+  }
+
+@media only screen and (max-width: 765px) {
+  #main-doc {
+    margin-left: 4px;
+  }
+
+
+code {
+  min-width: 240px;
+  margin-left: -20px;
+  width: 100%;
+  padding: 15px;
+  padding-left: 10px;
+  padding-right: 45px;
+  }
+#navbar {
+  left:-300px;
+  position:fixed;
+}
+}
+
+.keywords {
+  color:red;
+  background-color:pink;
+  padding: 2px;
+}
+
+#obj-link {
+  color:gray;
+  text-decoration: underline;
+}
+
+#geo {
+  max-width: 1rem;
+  width:100%;
+}
+
+#w3school {
+  text-decoration: none;
+  color:chocolate;
+}
+#w3school:hover {
+  color:forestgreen;
+  text-decoration: underline;
+}
+#sololearn {
+  color:chocolate;
+  text-decoration: none;
+}
+#sololearn:hover {
+  color:darkorange;
+  text-decoration: underline;
+}
+#freecodec {
+  text-decoration: none;
+  color:chocolate;
+}
+#freecodec:hover {
+  color:darkblue;
+  text-decoration: underline;
+}
+#udemy {
+  color:chocolate;
+  text-decoration: none;
+}
+#udemy:hover {
+  color:tomato;
+  text-decoration: underline;
+}
+
+#mdn {
+  font-family:sans-serif;
+  text-decoration: none;
+  color:#fff;
+  background-color:#000;
+  margin-left:4px;
+  padding:8px;
+  border: 1px solid;
+  border-radius: 30%;
+  transition-delay: 0.1s;
+}
+#mdn:hover {
+  font-weight: 600;
+  color:#000;
+  background-color:#fff;
+}
+

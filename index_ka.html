@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="js-doc-style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>JS - ტექნიკური დოკუმენტაცია</title>
+</head>
+<body>
+    <button id="ka"><a style="text-decoration:none; color:midnightblue; "href="index.html"><img id="geo" src="http://sites1.christophlutz.co.uk/gbmag/wp-content/uploads/2017/01/UK-flag-union-jack-1024x683.jpg"> EN</a></button>
+    <nav id="nav-bar">
+        <header id="header">JavaScirpt-ის ცნობარი</header>
+        <ul>
+            <li><a class="nav-link" href="#introduction">შესავალი</a></li>
+            <li><a class="nav-link" href="#what_you_should_already_know">საბაზისო მოთხოვნები</a></li>
+            <li><a class="nav-link" href="#hello_world">Hello World</a></li>
+            <li><a class="nav-link" href="#variables">ცვლადები</a></li>
+            <li><a class="nav-link" href="#scopes">გლობალური/ლოკალური პრინციპები</a></li>
+            <li><a class="nav-link" href="#data_types">მონაცემთა ტიპები</a></li>
+            <li><a class="nav-link" href="#conditionals">პირობითი წინადადებები</a></li>
+            <li><a class="nav-link" href="#loops">ციკლის ოპერაციები</a></li>
+            <li><a class="nav-link" href="#functions">ფუნქციები</a></li>
+            <li><a class="nav-link" href="#what_next">რესურსები</a></li>
+            <li><a class="nav-link" href="#reference">Reference</a></li>
+        </ul>
+    </nav>
+
+    <main id="main-doc">
+        <section class="main-section" id="introduction">
+            <header>შესავალი</header>
+                <article>
+                    <p>
+                    <strong>JavaScript</strong>(იკითხება: <em>ჯავასკრიპტი</em>; აბრევ. <b>JS</b>) — პროგრამირების ერთ-ერთი ფართოდ გავრცელებული ენაა და ერთადერთი პროგრამირების ენა, რომელიც გამოიყენება ვებ დეველოპმენტში. სახელწოდება JavaScript, როგორც სავაჭრო ნიშანი დარეგისტრირებულია ფირმა Sun Microsystems, Inc-ის მიერ.
+                    JavaScript შექმნილია კომპანია Netscape-ის მიერ, და პირველად ჩართული იყო Netscape Navigator ბრაუზერში. მისი თავდაპირველი სახელწოდება იყო Mocha, შემდეგ LiveScript. მაგრამ იმ დროისთვის, პოპულარულობის პიკში იყო Java და მარკეტოლოგებმა გადაწყვიტეს, 
+                    რომ "Java"-ს მსგავსი დასახელება უფრო პოპულარულს გახდიდა ენას. ასე წარმოიშვა სახელი JavaScript. ასევე Javascript-ი Java-ს "შვილობილი" ენა უნდა ყოფილიყო, მაგრამ შემდგომში, JavaScript სხვა გზით განვითარდა, მეტად დაიხვეწა და ჩამოყალიბდა დამოუკიდებელ ენად, რომელსაც გააჩნია თავისი სპეციფიკაცია - <strong>ECMAScript</strong>..
+                    </p>
+                    <p>სხვადასხვა ენაზე დაწერილი პროგრამის შესრულების ორი ვარიანტი არსებობს - კომპილაცია და ინტერპრეტაცია:</p>
+                    <ul>
+                        <li><strong>კომპილაცია</strong> - არის პროცესი, როდესაც პროგრამის კოდი, სხვა პროგრამის სპეციალური ინსტრუმენტის - კომპილატორის დახმარებით გადაიწერება პროცესორისათვის გასაგებ ენაში - სამანქანო ენაში და ამის შემდეგ ხდება მისი შესრულება.</li>
+                        <li><strong>ინტერპრეტაცია</strong>არის პროცესი, როდესაც პროგრამის კოდი გადაეცემა ინტერპრეტატორს , რომელიც კოდში მითითებულ ინსტრუქციებს ასრულებს კოდის სამანქანო ენაზე გადათარმნის გარეშე.</li>
+                    </ul>
+                </article>
+        </section>
+
+        <section class="main-section" id="what_you_should_already_know">
+            <header>რა ცოდნაა საჭირო?</header>
+            <article>
+                <p>
+                    JavaScript-ის შესწავლამდე აუცილებელია საბაზისო ცოდნა შემდეგ მოთხოვნებზე:
+                </p>
+                <ul>
+                    <li>ინტენრეტისა და ქსელის(WWW) მუშაობის ზოგადი პრინციპების ცოდნა.</li>
+                    <li>HTML/CSS-ის კარგი ცოდნა, ვინაიდან JavaScirpt-ი უშუალოდ <a href="#" target="_blank">HTML DOM</a>-ზე მოქმედებს.</li>
+                    <li>პროგრამირების საფუძველბისა და პრინციპების ცოდნა</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="hello_world">
+            <header>Your First Program</header>
+            <article>
+                <p><em>"Your first program will be perfect! No errors, no bugs, ..."Hello, World!"</em></p>
+                <p>Hello world — უმარტივესი პროგრამაა, რომელიც ამა თუ იმ საშუალებით გამოუტანს მომხმარებელს შეტყობინებას „Hello, World!“. 
+                    ამ პროგრამის დაწერის ტრადიცია მოდის დენის რიტჩის და ბრაიან კერნიგენის კლასიკური ნაშრომიდან „The C Programming Language“. დღეს უმეტესობა 
+                    ელემენტარული პროგრამირების ენის სახელმძღვანელოსი იწყება ამ პროგრამით, როგორც უმარტივესი მაგალითია ყველა შესაძლებლიდან.</p>
+                <p>"Hello World" JS იმპლემენტაცია:</p>
+                <code>console.log("Hello, World!");</code>
+            </article>
+        </section>
+        <section class="main-section" id="variables">
+            <header>ცვლადები (Variables)</header>
+            <article>
+                <p>ცვლადები წარმოადგენს რაიმე ტიპის მონაცემების შემნახველს. ჯავასკრიპტში არსებობს სამი ცვლადის სახეობა:</p>
+                <ul>
+                    <li><span class="keywords">var</span></li>
+                    <li><span class="keywords">let</span></li>
+                    <li><span class="keywords">const</span></li>
+                </ul>
+                <p>ცვლადის სახელებს ეწოდებათ იდენტიფიკატორები. ცვლადების სახელდებისას აუცილებლად უნდა იქნეს გათვალისწინებული შემდეგი მოთხოვნები:</p>
+                <ul>
+                    <li>ცვლადის სახელის პირველი სიმბოლო აუცილებლად უნდა იყოს ლათინური ანბანის დიდი ან პატარა ასო, ან ქვედა ტირე ან დოლარის ნიშანი;</li>
+                    <li>ცვლადის სახელში დაუშვებელია სასვენი ნიშნებისა და გამოტოვებული ადგილების გამოყენება;</li>
+                    <li>ცვლადის სახელი მგრძნობიარეა სიმბოლოთა რეგისტრის მიმართ. შესაბამისად "name" და "Name" სხვადასხვა ცვლადებია</li>
+                    <li>ცვლადის სახელში სიმბოლოთა რაოდენობა არ არის შეზღუდული.</li>
+                    <li>ჯავასკრირპტის რეზერვირებული სიტყვების ცვლადებად ვერ გამოვიყენებთ. (მაგალითად, როგორებიცაა: for, while, var, etc).</li>
+                </ul>
+                <p>სინტაქსი:</p>
+                <code><span style="color:green">//Syntax</span><br>var variableName = <em>value;</em><br>var x = 10;<br>let name = 'Jon Snow'</code>
+            </article>
+        </section>
+        <section class="main-section" id="scopes">
+            <header>გლობალური და ლოკალური ცვლადები</header>
+            <article>
+                <p>როდესაც, ჩვენ ცვლადს ვქმნით ფუნქციის გარეთ, მას ეწოდაბა <b>გლობალური ცვლადი</b>, რადგან იგი ხელმისაწვდომი ხდება ნებისმიერი სხვა ფუნქციისთვის, და მთლიანად პროგრამის ნებისმიერი ნაწილისთვის. ხოლო თუ ცვლადს ვქმნით ფუნქციის შიგნით, 
+                   ის არის <b>ლოკალური ცვლადი</b>, რადგან მისი გამოყენება შესაძლებელია მხოლოდ ამ ფუნქციაში. სხვაგვარად რომ ვთქვათ იგი "ჩაკეტილია" ფუნქციაში და პროგრამის გარეთ ის არ არსებობს.
+                    ჯავასკრიპტის გლობალურ ცვლადს წარმოადგენს var. ხოლო ლოკალური ცვლადებია let და const, რომლებიც წარმოდგენილი იქნა ECMASCript2015-ში.</p>
+                <p>უკეთესი ვიზუალიციისთვის განვიხილოთ კოდი:</p>
+                    <code>if (true) { var x = 5; } console.log(x); <span class="comments">// 5 </span>></code>
+                <p>ცოლო let-ის გამოყენების შემთხვევაში გვექნება შემდეგი:</p>
+                <code>if (true) { let y = 5; } console.log(y); <span class="comment">// ReferenceError: y is not
+                    defined</span></code>
+            </article>
+        </section>
+        <section class="main-section" id="data_types">
+            <header>მონაცემთა ტიპები</header>
+            <article>
+                <p>ჯავასკრიპტში გვხვდება სულ 7 სახის მონაცემთა ტიპი, აქედან პირველ ექვს ეწოდება primitives (პირველადები) ხოლო მეშვიდე არის ობიექტები, რომელიც ამათ შორის ყველაზე ეფექტური და კომპლექსურია:</p>
+                <ul id="data">
+                    <li><strong>Numbers</strong> - ნებისმიერი სახის რიცხვები (მაგ: 17.45,-45, 1E+12...)</li>
+                    <li><strong>Strings</strong> - სტრიქონული ტიპი - ტექსტი და სიმბოლოები (მაგ: "hello", "a",...)</li>
+                    <li><strong>Boolean</strong> - ლოგიკური ტიპის მნიშვნელობები <span class="keywords">true</span> და <span class="keywords">false</span></li>
+                    <li><strong>Symbol</strong>  - (ECMAScript 2015). მონაცემთა ტიპი, რომელიც იღებს უნიკალურ, შეუცვლელ მნიშვნელობას.</li>
+                    <li><strong>Objects (ობიექტები)</strong> - ობიექტი არის კოდის ფრაგმენტი რომელიც მოიცავს მეთოდებსა და თვისებებს, თვისება არის ობიექტის მახასიათებელი, 
+                        ცვლადს რომელიც აღწერილია ობიექტში ეწოდება ობიექტის თვისება, ხოლო ფუნქციას რომელიც აღწერილია ობიექტში - ამ ობიექტის მეთოდი . ჯავასკრიპტში ობიექტი აღიქმევა
+                        რეალურ ცხოვრებაში არსებულ ობიექტისავით, მაგალითად მანქანა, ჩვენ შეგვიძლია მას მივცეთ მისთვის უნიკალური ფერი, ნომერი, ტიპი და ა.შ. ობიექტში ასევე შედის მასივები (Arrays).<a id="obj-link" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects" target="_blank">მეტი ობიექტებზე =></a></li>
+                    <li><span class="keywords">undefined</span> - განუსაზღვრელი მნიშვნელობის მქონე მონაცემი, მაგ: ცვლადს, რომელსაც არ აქვს მნიშვნელობა მინიჭებული </li>
+                    <li><span class="keywords">null</span> - ამ მნიშვნელობას არანაირი კავშირი არ აქვს ზემოთ ჩამოთვლილ ტიპებთან, ეს არის ცალკე ტიპის ერთადერთი შესაძლო მნიშვნელობა, ანუ ეს არის სპეციალური მნიშვნელობა რომელიც პირდაპირი მნიშვნელობით გულისხმობს "არაფერს".</li>
+                </ul>
+                <p>Although these data types are a relatively small amount, they enable you to perform useful functions with your applications. First six data types are called primitives. Objects and functions are the other fundamental elements in the language.  </p>
+            </article>
+        </section>
+        <section class="main-section" id="conditionals">
+            <header>პირობითი წინადადებები</header>
+            <article>
+                <p>
+                    პირობიტი წინადადებები გამოხატავს რაიმე დამოკიდებულებას, რომლიც ემქვედებარება გარკვეულ ლოგიკას. ჯავასკრიპტში ამისთვის გამოიყენება if, else, else if და switch-case ოპერატორები. მათ იყენებენ, რათა შევამოწმოთ კონკრეტული პირობის მცდარობა ან სამართლიანობა და შესაბამისად ვიმოქმედოთ პასუხის შემთხვევაში.</p>
+                <p>if გამოიყენება, რათა შევასრულოთ რაიმე მოქმედება, თუკი პირობა არის სამართლიანი (true). მასთან ერთად ხშირად იყენებ else წინადადებას, რათა პირობის მცდარობის (false) შემთხვევაში შესრულდება ის მოქმედება რაც else-ის კოდშია მითითებული. სინტაქსი შემდეგნაირია:</p>
+                <code>if (condition) { 
+                    //მოქმედება_თუ_პირობა_სამართლიანია; 
+                } else {
+                    //მოქმედება_თუ_პირობა_მცდარია; 
+                }</code>
+                <p>else if წინადადებას იგივე პრინციპი აქვს, განსხვავებით, რომ შეგვიძლია მისი მრავალჯერ გამოყენება სხვადასხვა პირობების დასატესტად:</p>
+                <code>if (condition_1) { 
+                    statement_1; 
+                    } else if (condition_2) { 
+                        statement_2;
+                } else if (condition_n) { 
+                    statement_n; 
+                } else { statement_last; 
+                }</code>
+                <p>სიტყვა გასაღები switch კითხულობს ცვლადის მნიშვნელობას, სიტყვა გასაღები case საშუალებას იძლევა განიხილოს, ჩამოითვალოს ცვლადის სავარაუდო მნიშვნელობები და აგრეთვე შესაბამისი მოქმედებები. break კი უზრულვეფოფს ციკლის დამთავრებას იმ შემთხვევაში თუ მის მშობელ case - ში მითითებული პირობა შესრულდება. default არის ალტერნატიული ქწმედება თუ არც ერთ case - ში მითითებული პირობა არ სრულდება.</p>
+                <p>სინტაქსი:</p>
+                <code>switch (expression) {
+                    case value1:
+                    //თუკი expression დაემთხვა value1-ს შესრულდება ამ case-ში მოცემული კოდი
+                      break;
+                    case value2:
+                    //თუკი expression დაემთხვა value2-ს შესრულდება ამ case-ში მოცემული კოდი
+                      break;
+                    ...
+                    case valueN:
+                    //თუკი expression დაემთხვა valueN-ს შესრულდება ამ case-ში მოცემული კოდი
+                      break;
+                    [default: //optional
+                      //თუკი არცერთი პირობა არ შესრულდა 
+                      [break;]]
+                  }</code>
+            </article>
+        </section>
+        <section class="main-section" id="loops">
+            <header>ციკლური ოპერაციები</header>
+            <article>
+                <p>ამა თუ იმ ამოცანის გადასაჭრელად ხშირად საჭირო ხდება ერთი და იგივე გამოთვლების მრავალჯერ ჩატარება. განმეორებად ბრძანებათა ჯგუფს ეწოდება ციკლი. javascript - ში ციკლები იწერება შემდეგი ოპერატორების დახმარებით : while და for .</p>
+                <header>While ოპერატორი</header>
+                <p>while ციკლი არის ასე ვთქვათ წინაპირობითი, პრეპირობითი ანუ ციკლში პირობის შემოწმება/შესრულება ხდება ციკლის გამოძახებამდე , ანუ ციკლის ტანის შესრულებამდე გამოითვლება ლოგიკური პირობის მნიშვნელობა, თუ პირობა ჭერშმარიტია მაშინ ციკლიც სრულდება, ამის შემდეგ ისევ მოწმდება პირობა, ციკლი მეორდება მანამ სანამ პირობა არის true.</p>
+                <code>while (condition_is_true) {
+                    statement //do this
+                }
+                </code>
+                <header>For ოპერატორი</header>
+                <p>ციკლის ეს ოპერატორი თავი თავში მოიცავს ცვლადს, ე.წ ციკლის პარამეტრს ან ციკლის მთვლელს. ციკლი იწყება სიტყვა გასარებით for შემდეგ ფრჩხილებში იწერება კონსტრუქცია, რომელიც მოიცავს ციკლის პარამეტრის ინიციალიზაციას, ლოგიკურ გამოსახულებას და ამ პარამეტრის მოდიფიკაციის ანუ ცვლილების ჩანაწერს</p>
+                <p>Syntax:</p>
+                <code>for ([initialExpression]; [conditionExpression]; [incrementExpression])
+                    statement</code>
+
+                <p>ჯავასკირპტს ასევე გააჩნია სხვა მეტად თანამედროვე ციკლის ოპერატორები როგორებიცაა: do..while, for/in და for/of. <a class="obj-link" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for_statement">ინფორმაცია აქ</a></p>
+            </article>
+        </section>
+        <section class="main-section" id="functions">
+            <header>ფუნქციები</header>
+            <article>
+                <p>ფუნქცია ეს არის პროგრამის სახელდებული ფრაგმენტი, სხვადასხვა ინსტრუქციების ერთობლიობა, რომლის განსაზღვრაც ხდება ერთხელ მაგრამ გამოძახება შეიძლება მრავალჯერ.</p>
+                <p>ფუნქციის შექმნა ხდება შემდეგნაირად: სიტყვა გასაღები<em>function</em>-ს მიყოლებული:</p>
+                <ul>
+                    <li>ფუნქციის სახელი (სურვილისამებრ)</li>
+                    <li>პარამეტრები, გამოყოფილი მძიმით (ასევე შესაძლოა ფუნქციას არ ქონდეს პარამეტრები).</li>
+                    <li>და კოდი, რომილიც მოთავსებული იქნება ფიგურილ ბრჭყალებში: {...}.</li>
+                </ul>
+                <p>სინტაქსი:</p>
+                <code>function functionName(parameter1, parameter2, ... parameterN) { 
+                        <em>code block</em>
+                    };
+
+                    <span style="color:green">//მაგალითი (რიცხვის კვადრატის დამთვლელი ფუნქცია):</span>
+                    function square(number) { 
+                        return number * number; 
+                    } 
+                </code>
+            </article>
+        </section>
+        <section class="main-section" id="what_next">
+            <header>What Next?</header>
+            <p>მოცემული ცნობარი არის ჯავასკიპტის მცირე და საბაზისო მიმოხილვა. ჯავასკრიპტი არის მაღალი დონის ენა და გვაძლევს
+                საშუალებას შევასრულოთ უამრავი, ძალიან მნიშვნელოვანი მოქმედებები. ჯავასკრიპტი გამოიყენება ბევრ პროგრამირების დარგში, განსაკუთრებით ფართო გამოყენება აქვს
+                ვებ-ტექნოლოგიბსა და აპლიკაციების დამზადებაში.</p>
+            <p>ჯავასკრიპტის კურსები:</p>
+            <ul>
+                <li><a id="w3school" href="https://www.w3schools.com/js/default.asp" target="_blank">Learn JavaScript on W3Schools</a></li>
+                <li><a id="freecodec" href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/" target="_blank">JavaScript Algorithms and Data Structures (freeCodeCamp)</a></li>
+                <li><a id="sololearn" href="https://www.sololearn.com/learning/" target="_blank">Courses | Sololearn</a></li>
+                <li><a id="udemy" href="https://www.udemy.com/course/javascript-beginners-complete-tutorial/" target="_blank">The Modern Javascript Bootcamp Course (2021), <em>Udemy</em> (Paid Course)</a></li>
+            </ul>
+        </section>
+        <section class="main-section" id="reference">
+            <header>Reference</header>
+            <ul><li>See the full JavaScript reference on <a id="mdn" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference">MDN</a></li></ul>
+        </section>
+    </main>
+</body>
+</html>

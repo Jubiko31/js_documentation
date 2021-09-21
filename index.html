@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="js-doc-style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>JavaScript -Technical Documentation</title>
+</head>
+<body>
+    <button id="ka"><a style="text-decoration:none; color:tomato; "href="index_ka.html"><img id="geo" src="https://images.emojiterra.com/google/noto-emoji/unicode-13.1/128px/1f1ec-1f1ea.png"> KA</a></button>
+    <nav id="navbar">
+        <header id="header">JS Documentation</header>
+        <ul>
+            <li><a class="nav-link" href="#introduction">Introduction</a></li>
+            <li><a class="nav-link" href="#basic">Basic Requirements</a></li>
+            <li><a class="nav-link" href="#hello_world">Hello World</a></li>
+            <li><a class="nav-link" href="#variables">Variables</a></li>
+            <li><a class="nav-link" href="#scopes">Scopes</a></li>
+            <li><a class="nav-link" href="#data_types">Data Types</a></li>
+            <li><a class="nav-link" href="#conditionals">Conditionals</a></li>
+            <li><a class="nav-link" href="#loops">Loops</a></li>
+            <li><a class="nav-link" href="#functions">Functions</a></li>
+            <li><a class="nav-link" href="#what_next">What's Next?</a></li>
+            <li><a class="nav-link" href="#reference">Reference</a></li>
+        </ul>
+    </nav>
+
+    <main id="main-doc">
+        <section class="main-section" id="introduction">
+            <header>Introduction</header>
+                <article>
+                    <p>
+                    <strong>JavaScript</strong> (often abbreviated as <strong>JS</strong>) is a programming language that conforms to the ECMAScript specification. 
+                    JavaScript is high-level, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, dynamic typing, 
+                    prototype-based object-orientation, and first-class functions. Alongside HTML and CSS, JavaScript is one of the core technologies of the World Wide Web.
+                    Over 97% of websites use it client-side for web page behavior, often incorporating third-party libraries. Most web browsers have a dedicated JavaScript engine to execute the code on the user's device.
+                    As a multi-paradigm language, JavaScript supports event-driven, functional, and imperative programming styles. 
+                    It has application programming interfaces (APIs) for working with text, dates, regular expressions, standard data structures, and the Document Object Model (DOM).
+                    </p>
+                    <p>Core JavaScript can be extended for a variety of purposes by supplementing it with additional objects; for example:</p>
+                    <ul>
+                        <li>Client-side JavaScript extends the core language by supplying objects to control a browser and its Document Object Model (DOM). For example, client-side extensions allow an application to place elements on an HTML form and respond to user events such as mouse clicks, form input, and page navigation.</li>
+                        <li>Server-side JavaScript extends the core language by supplying objects relevant to running JavaScript on a server. For example, server-side extensions allow an application to communicate with a database, provide continuity of information from one invocation to another of the application, or perform file manipulations on a server.</li>
+                    </ul>
+                </article>
+        </section>
+
+        <section class="main-section" id="basic">
+            <header>What You Should Already Know</header>
+            <article>
+                <p>
+                    This guide assumes you have the following basic background:
+                </p>
+                <ul>
+                    <li>A general understanding of the Internet and the World Wide Web (WWW).</li>
+                    <li>Good knowledge and understanding of HTML/CSS</li>
+                    <li>Some programming experience or understanding basic programming principles</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="hello_world">
+            <header>Your First Program</header>
+            <article>
+                <p>Your first program will be perfect! No errors, no bugs, ..."Hello, World!"</p>
+                <p>A "Hello, World!" program generally is a computer program that outputs or displays the message "Hello, World!". Such a program is very simple in most programming languages, and is often used to illustrate the basic syntax of a programming language.</p>
+                <p>"Hello World" JS code:</p>
+                <code>console.log("Hello, World!");</code>
+            </article>
+        </section>
+        <section class="main-section" id="variables">
+            <header>Variables</header>
+            <article>
+                <p>Variables are container for storing data (values). There are 3 ways of declaring variables in JavaScript:</p>
+                <ul>
+                    <li><span class="keywords">var</span></li>
+                    <li><span class="keywords">let</span></li>
+                    <li><span class="keywords">const</span></li>
+                </ul>
+                <p>You use variables as symbolic names for values in your application. The names of variables, called identifiers, conform to certain rules.</p>
+                <p>A JavaScript identifier must start with a letter, underscore (_), or dollar sign ($); subsequent characters can also be digits (0-9). Because JavaScript is case sensitive, letters include the characters "A" through "Z" (uppercase) and the characters "a" through "z" (lowercase).</p>
+                <p>You can use ISO 8859-1 or Unicode letters such as å and ü in identifiers. You can also use the Unicode escape sequences as characters in identifiers. Some examples of legal names are Number_hits, temp99, and _name.</p>
+                <p>Declaring a variable:</p>
+                <code><span style="color:green">//Syntax</span><br>var variableName = <em>value;</em><br>var x = 10;<br>let name = 'Jon Snow'</code>
+            </article>
+        </section>
+        <section class="main-section" id="scopes">
+            <header>Variable Scope</header>
+            <article>
+                <p>When you declare a variable outside of any function, it is called a <b>Global variable</b>, because it is available to any other code in the current document. When you declare a variable within a function, 
+                    it is called a <b>Local variable</b>, because it is available only within that function.
+                    JavaScript before ECMAScript 2015 does not have block statement scope; rather, a variable declared within a block is local to the function (or global scope) that the block resides within. 
+                    For example the following code will log 5, because the scope of x is the function (or global context) within which x is declared, not the block, which in this case is an if statement.</p>
+                    <code>if (true) { var x = 5; } console.log(x); <span class="comments">// 5 </span>></code>
+                <p>This will change using let declaration:</p>
+                <code>if (true) { let y = 5; } console.log(y); <span class="comment">// ReferenceError: y is not
+                    defined</span></code>
+            </article>
+        </section>
+        <section class="main-section" id="data_types">
+            <header>Data Types</header>
+            <article>
+                <p>The latest JS version defines 7 types of data:</p>
+                <ul id="data">
+                    <li><strong>Numbers</strong> - well, basically all kinds of numbers (e.g: 17,-45,1E+12...)</li>
+                    <li><strong>Strings</strong> - storing and manipulating texts (e.g: "hello", "a",...)</li>
+                    <li><strong>Boolean</strong> - just two logical values <span class="keywords">true</span> and <span class="keywords">false</span></li>
+                    <li><strong>Symbol</strong>  - (new in ECMAScript 2015). A data type whose instances are unique and immutable.</li>
+                    <li><strong>Objects</strong> - In JavaScript, an object is a standalone entity, with properties and type. Compare it with a cup, 
+                        for example. A cup is an object, with properties. A cup has a color, a design, weight, a material it is made of, etc. 
+                        The same way, JavaScript objects can have properties, which define their characteristics. <a id="obj-link" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects" target="_blank">More about JS objects</a></li>
+                    <li><span class="keywords">undefined</span> - A top-level property whose value is undefined.</li>
+                    <li><span class="keywords">null</span> - A special keyword denoting a null value.</li>
+                </ul>
+                <p>Although these data types are a relatively small amount, they enable you to perform useful functions with your applications. First six data types are called primitives. Objects and functions are the other fundamental elements in the language.  </p>
+            </article>
+        </section>
+        <section class="main-section" id="conditionals">
+            <header>Conditional Statements</header>
+            <article>
+                <p>
+                    The conditional statements in JavaScript are if, else, else if and switch-case statements. They are used for checking a specific condition and executing the code based on the specified condition.</p>
+                <p>Use the if statement to execute a statement if a logical condition is true. Use the optional else clause to execute a statement if the condition is false. Syntax:</p>
+                <code>if (condition) { 
+                    statement_1; 
+                } else {
+                    statement_2; 
+                }</code>
+                <p>You may also compound the statements using else if to have multiple conditions tested in sequence, as follows:</p>
+                <code>if (condition_1) { 
+                    statement_1; 
+                    } else if (condition_2) { 
+                        statement_2;
+                } else if (condition_n) { 
+                    statement_n; 
+                } else { statement_last; 
+                }</code>
+                <p>The switch statement evaluates an expression, matching the expression's value to a case clause, and executes statements associated with that case, as well as statements in cases that follow the matching case.</p>
+                <p>Syntax:</p>
+                <code>switch (expression) {
+                    case value1:
+                      //Statements executed when the
+                      //result of expression matches value1
+                      break;
+                    case value2:
+                      //Statements executed when the
+                      //result of expression matches value2
+                      break;
+                    ...
+                    case valueN:
+                      //Statements executed when the
+                      //result of expression matches valueN
+                      break;
+                    [default: //optional
+                      //Statements executed when none of
+                      //the values match the value of the expression
+                      [break;]]
+                  }</code>
+            </article>
+        </section>
+        <section class="main-section" id="loops">
+            <header>Loops</header>
+            <article>
+                <p>Loops offer a quick and easy way to do something repeatedly. This chapter of the JavaScript Guide introduces the different iteration statements available to JavaScript.
+                    You can think of a loop as a computerized version of the game where you tell someone to take X steps in one direction, then Y steps in another.</p>
+                <header>While</header>
+                <p>A while statement executes its statements as long as a specified condition evaluates to true. A while statement looks as follows:</p>
+                <code>while (condition_is_true) {
+                    statement //do this
+                }
+                </code>
+                <p>If the condition becomes false, statement within the loop stops executing and control passes to the statement following the loop.</p>
+                <header>For loop</header>
+                <p>A for loop repeats until a specified condition evaluates to false. The JavaScript for loop is similar to the Java and C for loop.</p>
+                <p>Syntax:</p>
+                <code>for ([initialExpression]; [conditionExpression]; [incrementExpression])
+                    statement</code>
+                <p>When a for loop executes, the following occurs:</p>
+                <ol>
+                    <li>The initializing expression <em>initialExpression</em>, if any, is executed. This expression usually initializes one or more loop counters, 
+                        but the syntax allows an expression of any degree of complexity. This expression can also declare variables.</li>
+                    <li>The <em>conditionExpression</em>  expression is evaluated. If the value of <em>conditionExpression</em> is true, the loop statements execute. If the value of condition is false, the for loop terminates.</li>
+                    <li>The statement executes. To execute multiple statements, use a block statement ({ ... }) to group those statements.</li>
+                    <li>If present, the update expression <em>incrementExpression</em> is executed.
+                    </li>
+                    <li>Control returns to Step 2.</li>
+                </ol>
+                <p>There are more advanced, other types of loops, like: do..while, for..in/of. <a class="obj-link" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for_statement">See in reference</a></p>
+            </article>
+        </section>
+        <section class="main-section" id="functions">
+            <header>Functions</header>
+            <article>
+                <p>Functions are one of the fundamental building blocks in JavaScript. 
+                    A function in JavaScript is similar to a procedure—a set of statements that performs a task or calculates a value, but for a procedure to qualify as a function, 
+                    it should take some input and return an output where there is some obvious relationship between the input and the output. To use a function, you must define it 
+                    somewhere in the scope from which you wish to call it.</p>
+                <p>A function definition (also called a function declaration, or function statement) consists of the <em>function</em> keyword, followed by:</p>
+                <ul>
+                    <li>The name of the function</li>
+                    <li>A list of parameters to the function, enclosed in parentheses and separated by commas.</li>
+                    <li>The JavaScript statements that define the function, enclosed in curly brackets, {...}.</li>
+                </ul>
+                <p>Syntax:</p>
+                <code>function functionName(parameter1, parameter2, ... parameterN) { <span style="color:green">//parameters are optional</span>
+                        <em>code block</em>
+                    };
+
+                    <span style="color:green">//example (calculating square of a number):</span>
+                    function square(number) { 
+                        return number * number; 
+                    } 
+                </code>
+            </article>
+        </section>
+        <section class="main-section" id="what_next">
+            <header>What's Next?</header>
+            <p>This was very basic overview of JavaScript. JavaScript is high-level languages and
+                has tons of very cool and useful features. Some of next steps are to dive deep in DOM manipulating (for Web Dev)
+                learn OOP (Object Oriented Programming), classes, objects, arrays, methods, ES6,etc. To strength knowledge and learn new features
+                here are some recommended sources and courses:</p>
+            <ul>
+                <li><a id="w3school" href="https://www.w3schools.com/js/default.asp" target="_blank">Learn JavaScript on W3Schools</a></li>
+                <li><a id="freecodec" href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/" target="_blank">JavaScript Algorithms and Data Structures (freeCodeCamp)</a></li>
+                <li><a id="sololearn" href="https://www.sololearn.com/" target="_blank">Courses | Sololearn</a></li>
+                <li><a id="udemy" href="https://www.udemy.com/course/javascript-beginners-complete-tutorial/" target="_blank">The Modern Javascript Bootcamp Course (2021), <em>Udemy</em> (Paid Course)</a></li>
+            </ul>
+        </section>
+        <section class="main-section" id="reference">
+            <header>Reference</header>
+            <ul><li>See the full JavaScript reference on <a id="mdn" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference">MDN</a></li></ul>
+        </section>
+    </main>
+</body>
+</html>
